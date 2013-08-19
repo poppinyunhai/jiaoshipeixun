@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  group_no: MyString
+  time: MyString
+  specific_time: MyText
+
+two:
+  group_no: MyString
+  time: MyString
+  specific_time: MyText

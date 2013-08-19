@@ -1,0 +1,21 @@
+.page-header
+  h3 报名列表
+table.table.table-striped
+  tr
+    th 姓名
+    th 邮箱
+    th 电话
+    th QQ
+    th 所选班级
+    th
+  - @customers.each do |customer|
+    tr
+      td = customer.name
+      td = customer.email
+      td = customer.phone
+      td = customer.qq
+      td = customer.group.group_no if customer.group.present?
+      td
+        = link_to "Edit", edit_admin_customer_path(customer), :class => 'btn btn-info'
+        |&nbsp;
+        = link_to "Delete", [:admin, customer], method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'

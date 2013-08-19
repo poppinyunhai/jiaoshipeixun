@@ -1,0 +1,29 @@
+- content_for :styles do
+  = stylesheet_link_tag "services", :media => "screen"
+  = stylesheet_link_tag "flexslider", :media => "screen"
+- content_for :javascript do
+  = javascript_include_tag "flexslider"
+= render "home/slider"
+#service_2
+  .container
+    .section_header
+      h3 资格认证介绍
+    - @projects.each do |project|
+      .row.perk
+        .span2.circle.circle1
+          img src='/assets/clean_canvas/service_ico1.png'
+        .span10.description_wrapper
+          h5 项目发展背景
+          p = project.background.html_safe
+      .row.perk
+        .span2.circle
+          img src='/assets/clean_canvas/service_ico2.png'
+        .span10.description_wrapper
+          h5 问题解决方案
+          p = project.question.html_safe
+      .row.perk.last
+        .span2.circle
+          img src='/assets/clean_canvas/service_ico3.png'
+        .span10.description_wrapper
+          h5 项目特色
+          p = project.feature.html_safe

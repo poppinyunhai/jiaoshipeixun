@@ -1,0 +1,23 @@
+.page-header
+  h3 学员列表
+table.table.table-striped
+  tr
+    th Name
+    th image
+    th Position
+    th
+  - @cases.each do |ca|
+    tr
+      td = ca.name
+      td = ca.image
+      td = ca.position
+      td
+        = link_to 'Edit', edit_admin_case_path(ca), :class => 'btn btn-info'
+        | &nbsp;
+        = link_to 'Delete', [:admin, ca], method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'
+        | &nbsp;
+        = link_to 'UP', move_up_admin_case_path(ca), method: :put, :remote => true, :class => 'btn btn-primary'
+        | &nbsp;
+        = link_to 'DOWN', move_down_admin_case_path(ca), method: :put, :remote => true, :class => 'btn btn-warning'
+
+

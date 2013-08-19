@@ -1,0 +1,27 @@
+<%= render "home/slider"%> 
+<div class="row">
+  <div class="span6 offset3">
+    <%=raw @desc.content %>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <h3>立即报名</h3>
+    <%= form_for @meet do |f| %>
+      <%= f.label :name, "姓名"%>
+      <%= f.text_field :name %>
+      <%= f.label :phone, "电话" %>
+      <%= f.text_field :phone %>
+      <%= f.label :qq, "QQ" %>
+      <%= f.text_field :qq %>
+      <p style="font-size: 14px">参与身份</p>
+      <p>
+        <%= f.select :statu_id, Statu.all.map { |c| [c.name, c.id] }%>
+      </p>
+      <%= f.label :company, "就职公司" %>
+      <%= f.text_field :company %>
+      <p>
+        <%= f.submit "提交", class: "btn btn-primary"%>
+      </p>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+#clients
+  .container
+    .section_header
+      h3 部分就业合作机构
+    .row
+      - @cooperators.each do |cooperator|
+        .span3
+          h5 = cooperator.name
+
+

@@ -1,0 +1,14 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+      = link_to 'Knewtoefl 管理后台', '#', :class => 'brand'
+      .nav-collapse.collapse
+        p.navbar-text.pull-right
+          span
+            = link_to '网站首页', root_path
+          - if admin_signed_in?
+            |&nbsp;&nbsp;Welcome #{current_admin.email} &nbsp;&nbsp;
+            = link_to 'Logout', destroy_admin_session_path, :method => :delete
+          - else
+            = link_to 'Login', new_admin_session_path
+

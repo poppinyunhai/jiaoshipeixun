@@ -1,0 +1,12 @@
+= render 'home/slider'
+#features
+  .container
+    .section_header
+      h3 我们的学员
+    - @cases.each do |c|
+      .row.feature
+        .span3
+          img src=c.image
+        .span6.info
+          h3 = c.name
+          p = c.content.html_safe

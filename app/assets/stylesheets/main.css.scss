@@ -1,0 +1,47 @@
+.navbar a.brand {
+  font-size: 22px;
+  text-align: center;
+
+  p {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+}
+
+.navbar span.bigger {
+  font-size: 1.3em;
+}
+
+img.logo {
+  float: left;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+#career {
+  font-size: 1.2em;
+
+  li {
+    margin-top: 10px;
+  }
+
+  ul, ol {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  ol {
+    position: relative;
+    left: 20px;
+  }
+
+}
+
+#new_admin {
+  margin-top: 140px;
+  margin-left: 60px;
+}
+
+

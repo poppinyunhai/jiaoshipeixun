@@ -1,0 +1,22 @@
+- content_for :styles do
+  = stylesheet_link_tag "services", :media => "screen"
+  = stylesheet_link_tag "flexslider", :media => "screen"
+- content_for :javascript do
+  = javascript_include_tag "flexslider"
+= render "home/slider"
+
+#service_2
+  .container
+    .section_header
+      h3 入学要求
+      .row.perk
+        .span2.circle.circle1
+          img src='/assets/clean_canvas/service_ico1.png'
+        .span10.description_wrapper
+          h5 满足以下三项之一即可报名参加资格认证培训：
+          p
+            ul.items
+              li 托福成绩90+
+              li 雅思成绩6.5+
+              li 入学测试80+
+            = render "home/btn"

@@ -1,0 +1,13 @@
+.page-header
+  h3 合作机构
+table.table.table-striped
+  tr
+    th Name
+    th
+  - @cooperators.each do |cooperator|
+    tr
+      td = cooperator.name
+      td
+        = link_to 'Edit', edit_admin_cooperator_path(cooperator), :class => 'btn btn-info'
+        | &nbsp;
+        = link_to 'Delete', [:admin, cooperator], method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'

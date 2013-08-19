@@ -1,0 +1,27 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>姓名</th>
+      <th>电话</th>
+      <th>QQ</th>
+      <th>参与身份</th>
+      <th>就职公司</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @meet.each do |f| %>
+      <tr>
+        <td><%= f.name %></td>
+        <td><%= f.phone %></td>
+        <td><%= f.qq %></td>
+        <td><%= Statu.find(f.statu_id).name %></td>
+        <td><%= f.company %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+  
+  
+  
+  

@@ -1,0 +1,13 @@
+- content_for :styles do
+  = stylesheet_link_tag "services", :media => "screen"
+  = stylesheet_link_tag "flexslider", :media => "screen"
+- content_for :javascript do
+  = javascript_include_tag "flexslider"
+= render "home/slider"
+#showcase
+  .container
+    .row.feature_wrapper
+      .features_op1_row
+        .span12
+          .text
+            =raw @checkout.content 

@@ -1,0 +1,207 @@
+
+#contact {
+    margin-top: 70px;
+}
+#contact .contact {
+    margin: 40px 0 100px;
+}
+#contact .contact p {
+    color: #939394;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 24px;
+    margin-bottom: 47px;
+}
+#contact .form {
+    margin: 0;
+}
+#contact .contact form {
+    margin: 0;
+}
+#contact .form .box {
+    margin: 0;
+}
+#contact .form .box input[type="text"] {
+    border-radius: 3px 3px 3px 3px;
+    color: black;
+    height: 29px;
+    margin-bottom: 10px;
+    padding-left: 39px;
+    width: 89%;
+}
+#contact .form .box input.name {
+    background: url("../img/formname.png") no-repeat scroll 5px center #FFFFFF;
+}
+#contact .form .box input.mail {
+    background: url("../img/formmail.png") no-repeat scroll 5px center #FFFFFF;
+}
+#contact .form .box input.phone {
+    background: url("../img/formphone.png") no-repeat scroll 5px center #FFFFFF;
+}
+#contact .form .box_r {
+    float: right;
+}
+#contact .form .box textarea {
+    border-radius: 3px 3px 3px 3px;
+    height: 113px;
+    margin: 0;
+    padding: 11px;
+    width: 94%;
+}
+#contact .contact .submit {
+    margin: 0;
+}
+#contact .contact .submit .box {
+    margin: 0;
+}
+#contact .contact .submit label.checkbox {
+    color: #394350;
+}
+#contact .contact .submit .right {
+    float: right;
+}
+#contact .contact .submit input[type="submit"] {
+    background: none repeat scroll 0 0 #187CCC;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 15px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+    transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+#contact .contact .submit .right input[type="submit"]:hover {
+    background: none repeat scroll 0 0 #252528;
+}
+#contact .map {
+    margin: 0;
+}
+#contact .map iframe {
+    display: block;
+}
+#contact .map .box_wrapp {
+    background: none repeat scroll 0 0 white;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 7px 0 rgba(26, 26, 26, 0.4);
+    margin: 0;
+    padding: 33px 0;
+    position: absolute;
+    top: 41%;
+}
+#contact .map .box_wrapp .box_cont {
+    margin: 0 auto;
+    width: 76%;
+}
+#contact .map .box_wrapp .head {
+    margin-bottom: 17px;
+    overflow: hidden;
+    width: 100%;
+}
+#contact .map .box_wrapp .head h6 {
+    border-bottom: 1px solid;
+    float: left;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 2px;
+}
+#contact .map .box_wrapp ul.street {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#contact .map .box_wrapp ul.street li {
+    color: #777777;
+    font-size: 14px;
+}
+#contact .map .box_wrapp ul.street li.icon {
+    margin-top: 3px;
+}
+#contact .map .box_wrapp ul.street li.icon span.ico1 {
+    float: left;
+    height: 20px;
+}
+#contact .map .box_wrapp ul.street li.icon span.ico2 {
+    background-position: 0 -23px;
+    float: left;
+    height: 20px;
+}
+#contact .map .box_wrapp ul.street li.icon .text {
+    color: #777777;
+    font-size: 15px;
+    margin-left: 6px;
+}
+#contact .map .box_wrapp ul.street li.icon a:hover {
+    color: #187CCC;
+    transition: all 0.2s ease 0s;
+}
+#contact .map .box_wrapp ul.street li.icontop {
+    margin-top: 13px;
+}
+#contact .map .box_wrapp .headbottom {
+    margin-top: 42px;
+}
+#contact .map .box_wrapp p {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+#contact .map .box_wrapp a.btn {
+    background: none repeat scroll 0 0 #187CCC;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: none;
+    color: #FFFFFF;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 6px 0;
+    text-shadow: none;
+    text-transform: uppercase;
+    transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    width: 56%;
+}
+#contact .map .box_wrapp a.btn:hover {
+    background: none repeat scroll 0 0 #252528;
+}
+.contacticos {
+    background: url("../img/contact_icos.png") no-repeat scroll 0 0 transparent;
+    height: 44px;
+    width: 24px;
+}
+#contact .contact .submit .box {
+    margin: 10px 0 24px;
+}
+#contact .form .box input[type="text"] {
+    width: 87%;
+}
+#contact .contact .submit .right input[type="submit"] {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    padding: 7px;
+    width: 53%;
+}
+#contact .map .box_wrapp {
+    margin: 0 auto 80px;
+    position: relative;
+    width: 90%;
+}
+#contact .map .box_wrapp .box_cont {
+}
+#contact .map iframe {
+    display: none;
+}
+#contact .map .box_wrapp a.btn {
+    width: 65%;
+}
+#contact .contact .submit .right input[type="submit"] {
+    width: 60%;
+}
+#contact .map .box_wrapp {
+    width: 100%;
+}
+

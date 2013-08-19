@@ -1,0 +1,21 @@
+.page-header
+  h3 教师列表
+table.table.table-striped
+  tr
+    th Name
+    th Image
+    th Position
+    th
+  - @teachers.each do |teacher|
+    tr
+      td = teacher.name
+      td = teacher.image
+      td = teacher.position
+      td
+        = link_to 'Edit', edit_admin_teacher_path(teacher), :class => 'btn btn-info'
+        | &nbsp;
+        = link_to 'Delete', [:admin, teacher], method: :delete, data: { confirm: 'Are you sure?'}, :class => 'btn btn-danger'
+        | &nbsp;
+        = link_to 'UP', move_up_admin_teacher_path(teacher), method: :put, :remote => true, :class => 'btn btn-primary'
+        | &nbsp;
+        = link_to 'DOWN', move_down_admin_teacher_path(teacher), method: :put, :remote => true, :class => 'btn btn-warning'

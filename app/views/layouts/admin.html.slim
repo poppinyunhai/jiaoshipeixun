@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Knewtoefl 后台管理
+    meta charset="utf-8"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    = stylesheet_link_tag "admin", :media => "all"
+    = yield :styles
+    = javascript_include_tag "admin"
+    = yield :javascript
+    = csrf_meta_tags
+
+  body
+    = render "layouts/admin_navbar"
+    .container-fluid
+      .row-fluid
+        - if admin_signed_in?
+          .span3
+            = render 'layouts/admin_sidebar'
+        .span9
+          = yield
+      hr
+      footer
+        p Knewtoefl.com 2013
+

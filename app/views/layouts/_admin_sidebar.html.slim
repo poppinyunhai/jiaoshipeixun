@@ -1,0 +1,10 @@
+.well.sidebar-nav
+  ul.nav.nav-list
+    - admin_sidebar_items.each do |item|
+      li.nav-header
+        h4 = item[:group_name]
+      - item[:sidebar_items].each do |sidebar_item|
+        - css_class = (@current_nav_item == sidebar_item[1]) ? 'active' : ''
+        li class=css_class
+          = link_to sidebar_item[0], sidebar_item[1]
+

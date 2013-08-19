@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @customer.name
+p
+  strong Phone:
+  = @customer.phone
+p
+  strong Email:
+  = @customer.email
+p
+  strong QQ:
+  = @customer.qq
+p
+  strong Group:
+  = @customer.group
+
+= link_to 'Edit', edit_customer_path(@customer)
+'|
+= link_to 'Back', customers_path

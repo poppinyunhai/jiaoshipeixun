@@ -1,0 +1,20 @@
+section#feature_slider
+  article#showcasing.slide.active style="background-image: url(/assets/clean_canvas/aqua.jpg); display:block; background-position: 50% 0%; background-repeat: repeat no-repeat"
+    img.asset.left-30.sp600.t120.z1 src="/assets/thumb_GM_0048.jpg"
+    .info style="display: block"
+      h2 你的英文还不错?
+      .text-center style="margin-top: 20px;"
+        = link_to '/requirements', :class => 'btn btn-large btn-success' do
+            strong 入学要求
+
+  article#ideas.slide style="background-image: url(/assets/clean_canvas/aqua.jpg); display: none; background-position: 50% 0%; background-repeat: repeat no-repeat;"
+    .info style="display:block"
+      h2 你希望一毕业就月薪上万?
+    img.asset.left-480.sp600.t260.z1 src="/assets/thumb_GM_0002.jpg"
+    img.asset.left-210.sp600.t213.z2 src="/assets/thumb_GM_0072.jpg"
+    img.asset.left-60.sp600.t260.z1 src="/assets/thumb_GM_0101.jpg"
+  article#tour.slide style="background-image: url(/assets/clean_canvas/aqua.jpg); display: none; background-position: 50% 0%; background-repeat: repeat no-repeat;"
+    img.asset.left-350.sp450.t135.z2 src="/assets/thumb_GM_0127.jpg"
+    .info style="display:block"
+      h2 下一站：托福名师还是雅思王子？
+      = link_to "立即加入", join_path

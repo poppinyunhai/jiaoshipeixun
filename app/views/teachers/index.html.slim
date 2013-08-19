@@ -1,0 +1,12 @@
+= render 'home/slider'
+#features
+  .container
+    .section_header
+      h3 我们的老师
+    - @teachers.each do |teacher|
+      .row.feature
+        .span3
+          img src=teacher.image.thumb.url
+        .span6.info
+          h3 = teacher.name
+          p = teacher.content.html_safe

@@ -1,0 +1,57 @@
+#showcase
+  .container
+    .row.feature_wrapper
+      .features_op1_row
+        .span12
+          .text
+            =raw @notice.content  
+    .section_header
+      h3 了解我们
+    .row.feature_wrapper
+      .features_op1_row
+        .span4.feature
+          .img_box
+            img src="/assets/thumb_GM_0002.jpg"
+          .text
+            h3 资格认证介绍
+            p
+              = link_to '了解更多', projects_path, :class => 'feature_btn'
+        .span4.feature
+          .img_box
+            img src="/assets/thumb_GM_0101.jpg"
+          .text
+            h3 专业课程设置
+            p
+              = link_to '了解更多', '/syllabus', :class => 'feature_btn'
+        .span4.feature
+          .img_box
+            img src="/assets/thumb_GM_0126.jpg"
+          .text
+            h3 国内权威师资
+            p
+              = link_to '了解更多', teachers_path, :class => 'feature_btn'
+
+    .row.feature_wrapper
+      .features_op1_row
+        .span4.feature
+          .img_box
+            img src="/assets/thumb_GM_0072.jpg"
+          .text
+            h3 高薪就业通道
+            p
+              = link_to '了解更多', '/career', :class => 'feature_btn'
+        .span4.feature
+          .img_box
+            img src="/assets/thumb_GM_0048.jpg"
+          .text
+            h3 顶级实训基地
+            p
+              = link_to '了解更多', workbases_path, :class => 'feature_btn'
+        .span4.feature
+          .img_box
+            img src="/assets/thumb_GM_0142.jpg"
+          .text
+            h3 优秀学员感言
+            p
+              = link_to '了解更多', cases_path, :class => 'feature_btn'
+

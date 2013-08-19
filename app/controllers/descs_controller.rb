@@ -1,0 +1,2 @@
+class DescsController < ApplicationController
+end

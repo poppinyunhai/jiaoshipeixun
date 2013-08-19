@@ -1,0 +1,10 @@
+- content_for :styles do
+  = stylesheet_link_tag 'redactor'
+- content_for :javascript do
+  = javascript_include_tag 'redactor'
+  = javascript_include_tag 'redactor_custom'
+= simple_form_for [:admin, @teacher] do |f|
+  = f.input :name
+  = f.input :image
+  = f.input :content
+  = f.submit 'Save', :class => 'btn btn-info'

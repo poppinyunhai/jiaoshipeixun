@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @case.name
+p
+  strong Image:
+  = @case.image
+p
+  strong Content:
+  = @case.content
+
+= link_to 'Edit', edit_case_path(@case)
+'|
+= link_to 'Back', cases_path

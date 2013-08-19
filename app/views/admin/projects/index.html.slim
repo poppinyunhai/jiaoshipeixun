@@ -1,0 +1,15 @@
+.page-header
+  h3 项目简介
+table.table
+  tr
+    th 字段1
+    th 字段2
+    th 字段3
+    th
+  - @projects.each do |project|
+    tr
+      td = project.background
+      td = project.question
+      td = project.feature
+      td
+        = link_to 'Edit', edit_admin_project_path(project), :class => 'btn btn-info'

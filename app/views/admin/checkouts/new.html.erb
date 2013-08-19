@@ -1,0 +1,6 @@
+<%= form_for [:admin, @checkout] do |f| %>
+  <h1>发表入学须知</h1>
+  <%= f.kindeditor :content %>
+  <p>&nbsp</p>
+  <%= f.submit "确定", class: "btn btn-primary"%>
+<% end %>

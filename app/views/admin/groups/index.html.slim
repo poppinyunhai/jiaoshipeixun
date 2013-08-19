@@ -1,0 +1,17 @@
+.page-header
+  h3 班级列表
+table.table.table-striped
+  tr
+    th 班号
+    th 上课时间
+    th 具体日期
+    th
+  - @groups.each do |group|
+    tr
+      td = group.group_no
+      td = group.time
+      td = group.specific_time.html_safe
+      td
+        = link_to 'Edit', edit_admin_group_path(group), :class => 'btn btn-info'
+        |&nbsp;
+        = link_to 'Delete', [:admin, group], method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger'

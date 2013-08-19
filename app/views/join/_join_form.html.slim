@@ -1,0 +1,16 @@
+- content_for :styles do
+  = stylesheet_link_tag "contact"
+#contact
+  .container
+    .section_header
+      h3 加入我们
+    .row.contact
+      = simple_form_for @customer do |f|
+        = f.input :name, required: true, :class => 'span6'
+        = f.input :phone, required: true
+        = f.input :email, required: true
+        = f.input :qq, label: 'QQ', required: true
+        = f.association :group, label_method: :group_no, value_method: :id, prompt: "请选择一个班级"
+        = f.submit '提交报名信息', :class => 'btn btn-info'
+
+

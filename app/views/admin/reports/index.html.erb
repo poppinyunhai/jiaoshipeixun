@@ -1,0 +1,5 @@
+<% @report.each do |f| %>
+  <p>
+    <%= link_to f.avatar_file_name, :controller => 'reports', :action => 'show', :id => f %>
+  </p>
+<% end %>

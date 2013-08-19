@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @teacher.name
+p
+  strong Image:
+  = @teacher.image
+p
+  strong Content:
+  = @teacher.content
+
+= link_to 'Edit', edit_teacher_path(@teacher)
+'|
+= link_to 'Back', teachers_path

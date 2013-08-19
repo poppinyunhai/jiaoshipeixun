@@ -1,0 +1,25 @@
+.navbar.transparent.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    = image_tag 'logo.jpg', :class => :logo
+    .container
+      a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand href="/"
+        strong
+          span.bigger 普林斯顿
+          | 留学教师资格认证
+        p Princeton International Teacher Certificate
+      .nav-collapse.collapse
+        ul.nav.pull-right
+          - navbar_items[:nav_items].each do |item|
+            - if @current_nav_item ==item[1]
+              - css_class='active'
+            - else
+              - css_class=''
+            li
+              = link_to item[0], item[1], :class => css_class
+          li
+            a href='#'
+              |400-6066-8601

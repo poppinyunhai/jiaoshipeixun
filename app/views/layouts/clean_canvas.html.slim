@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta http-equiv="Content-type" content="text/html; charset=UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    title 普林斯顿  留学教师资格认证 - 国内唯一留学教师资格认证项目
+    = stylesheet_link_tag "application", :media => "all"
+    = yield :styles
+    = javascript_include_tag "application"
+    = yield :javascript
+    = csrf_meta_tags
+
+  body.pull_top
+    = render 'layouts/navbar'
+
+    = yield
+
+    = render 'layouts/footer'

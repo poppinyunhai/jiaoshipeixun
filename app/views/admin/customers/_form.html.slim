@@ -1,0 +1,6 @@
+= simple_form_for [:admin, @customer] do |f|
+  = f.input :name
+  = f.input :email
+  = f.input :phone
+  = f.association :group, label_method: :group_no, value_method: :id
+  = f.submit 'Save', :class => 'btn btn-info'

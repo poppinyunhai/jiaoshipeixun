@@ -1,0 +1,6 @@
+li style="width: 50%; border-bottom: 1px solid #ccc;"
+  h4
+    = workbase.title
+  p=image_tag workbase.asset.url
+  p= link_to '删除', admin_workbasis_path(workbase), :method => :delete, :confirm => '真的要删除吗？', :class => 'btn btn-small btn-danger'
+

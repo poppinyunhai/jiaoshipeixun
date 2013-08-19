@@ -1,0 +1,22 @@
+- if notice
+  .container
+    .alert.alert-success
+      button type='button' class='close' data-dismiss='alert'
+        |&times;
+      = notice
+.group
+  .container
+    .section_header
+      h3 班级设置
+    .row
+      table.table.table-bordered
+        tr
+          th 班号
+          th 上课日期
+          th 具体日期
+        - @groups.each do |group|
+          tr
+            td = group.group_no
+            td = group.time
+            td = group.specific_time.html_safe
+
