@@ -9,6 +9,6 @@ class Admin::ReportsController < Admin::BaseController
   def destroy
     @report = Report.find(params[:id])
     @report.destroy
-    redirect_to admin_root_path
+    redirect_to admin_reports_path
   end
 end

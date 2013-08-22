@@ -1,5 +1,11 @@
+<div class="row"><h4>成绩单</h4></div>
 <% @report.each do |f| %>
-  <p>
-    <%= link_to f.avatar_file_name, :controller => 'reports', :action => 'show', :id => f %>
-  </p>
+  <div class= "row">
+    <div class= "span4" >
+      <%= link_to f.avatar_file_name, :controller => 'reports', :action => 'show', :id => f %>
+    </div>
+    <div class= "span4" >
+    <%= link_to "删除", admin_report_path(f), :method => :delete %>
+    </div>
+  </div>
 <% end %>

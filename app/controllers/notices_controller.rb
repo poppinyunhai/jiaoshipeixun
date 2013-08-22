@@ -12,4 +12,6 @@ class NoticesController < ApplicationController
     redirect_to new
   end
 
+  
+
 end

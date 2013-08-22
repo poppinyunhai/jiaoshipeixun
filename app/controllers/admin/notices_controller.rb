@@ -12,6 +12,16 @@ class Admin::NoticesController < Admin::BaseController
     redirect_to admin_notices_path
   end
 
+  def edit
+    @notice = Notice.find(params[:id])
+  end
+
+  def update
+    @notice = Notice.find(params[:id])
+    @notice.update_attributes(params[:notice])
+    redirect_to admin_notices_path
+  end
+
   def destroy
     
   end

@@ -1,6 +1,4 @@
-<%= form_for @notice, :url => admin_notice_path(Notice.last), :method => :put do |f| %>
-  <h1>修改公告</h1>
+<%= form_for [:admin, @notice],:url => { :controller => '/admin/notices', :action => 'update', :id => @notice },:html => { :multipart => true } do |f| %>
   <%= f.kindeditor :content%>
   <%= f.submit "更新", class: "btn btn-primary"%>
-  </p>
 <% end %>

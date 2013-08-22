@@ -12,5 +12,5 @@
         = f.input :qq, label: 'QQ', required: true
         = f.association :group, label_method: :group_no, value_method: :id, prompt: "请选择一个班级"
         = f.submit '提交报名信息', :class => 'btn btn-info'
-
+        = render "home/btn"
 

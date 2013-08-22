@@ -1,3 +1,5 @@
-<% @desc.each do |d| %>
-  <%= d.content %>
-<% end %>
+<div class="span8">
+  <%=raw @desc.content %>
+</p>
+  <%= link_to '更新', :controller => 'admin/descs', :action => 'edit', :id => @desc, class: "btn btn-primary" %>
+</div>

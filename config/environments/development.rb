@@ -41,8 +41,8 @@ Knewtoefl::Application.configure do
     :address => "smtp.gmail.com",
     :port => '587',
     :authentication => 'plain',
-    :user_name => 'hanluner@gmail.com',
-    :password => 'neverloseagain'
+    :user_name => 'knewclass@gmail.com',
+    :password => 'love@123.com'
   }
 
 end

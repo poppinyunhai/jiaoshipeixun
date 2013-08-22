@@ -1,5 +1,7 @@
-<%= form_for [:admin, @desc] do |f| %>
-  <h1> 发布公告 </h1>
-    <%= f.kindeditor :content%>
-    <%= f.submit "提交" %>
-<% end %>
+<div class="span12">
+  <%= form_for [:admin, @desc] do |f| %>
+    <h1> 发布活动须知 </h1>
+      <%= f.kindeditor :content, class: "span8"%>
+      <%= f.submit "提交" %>
+  <% end %>
+</div>
