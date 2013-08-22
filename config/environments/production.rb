@@ -72,7 +72,7 @@ Knewtoefl::Application.configure do
     :port => '587',
     :authentication => 'plain',
     :user_name => 'knewclass@gmail.com',
-    :password => 'love@123.com'
+    :password => 'YUEcici222'
   }
 
 end

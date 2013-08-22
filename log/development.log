@@ -52847,3 +52847,151 @@ Served asset /logo.jpg - 304 Not Modified (3ms)
 
 Started GET "/assets/clean_canvas/aqua.jpg" for 127.0.0.1 at 2013-08-22 14:56:52 +0800
 Served asset /clean_canvas/aqua.jpg - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/join_us" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Processing by JoinController#join_us as HTML
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" [0m
+  Rendered home/_btnt.html.erb (1.9ms)
+  Rendered home/_slider.html.slim (14.5ms)
+  Rendered join/_group.html.slim (4.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "groups".* FROM "groups" 
+  Rendered home/_btn.html.erb (1.6ms)
+  Rendered join/_join_form.html.slim (64.4ms)
+  Rendered join/join_us.html.slim within layouts/clean_canvas (109.3ms)
+  Rendered layouts/_navbar.html.slim (7.1ms)
+  Rendered layouts/_footer.html.slim (2.2ms)
+Completed 200 OK in 262ms (Views: 146.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/contact.css" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /contact.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /application.js - 304 Not Modified (42ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /application.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /logo.jpg - 304 Not Modified (8ms)
+
+
+Started GET "/assets/thumb_GM_0048.jpg" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /thumb_GM_0048.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/thumb_GM_0002.jpg" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /thumb_GM_0002.jpg - 304 Not Modified (5ms)
+
+
+Started GET "/assets/thumb_GM_0072.jpg" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /thumb_GM_0072.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/thumb_GM_0101.jpg" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /thumb_GM_0101.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/thumb_GM_0127.jpg" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /thumb_GM_0127.jpg - 304 Not Modified (3ms)
+
+
+Started GET "/assets/clean_canvas/body_bg.jpg" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /clean_canvas/body_bg.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/clean_canvas/aqua.jpg" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /clean_canvas/aqua.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/clean_canvas/leftright-arrows.png" for 127.0.0.1 at 2013-08-22 15:23:09 +0800
+Served asset /clean_canvas/leftright-arrows.png - 304 Not Modified (2ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2013-08-22 15:23:34 +0800
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IDH0JxaDWe3Co/TFvfuqun68RzGJxjG4a16UT4I9c7M=", "customer"=>{"name"=>"王林", "phone"=>"13011993002", "email"=>"3332132@173.com", "qq"=>"1111111", "group_id"=>"1"}, "commit"=>"提交报名信息"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.5ms)[0m  INSERT INTO "customers" ("created_at", "email", "group_id", "name", "phone", "qq", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 22 Aug 2013 07:23:34 UTC +00:00], ["email", "3332132@173.com"], ["group_id", 1], ["name", "王林"], ["phone", "13011993002"], ["qq", "1111111"], ["updated_at", Thu, 22 Aug 2013 07:23:34 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."id" = 1 LIMIT 1
+  Rendered customer_mailer/remind.html.slim (24.0ms)
+
+Sent mail to yuecici@gmail.com (10444ms)
+Date: Thu, 22 Aug 2013 15:23:35 +0800
+From: support@knewtoefl.com
+To: yuecici@gmail.com
+Message-ID: <5215bc7784190_a5c3fd261ed16c48628e@srhtekiMacBook-Air.local.mail>
+Subject: A new customer from knewtoefl.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+a25ld3RvZWZsLmNvbSDmnInmlrDnmoTnlKjmiLfmiqXlkI08L3A+PHA+
+5aeT5ZCNOueOi+aelzwvcD48cD7nlLXor506MTMwMTE5OTMwMDI8L3A+PHA+
+6YKu566xOjMzMzIxMzJAMTczLmNvbTwvcD48cD5RUToxMTExMTExPC9wPjxw
+PuaJgOaKpeePree6pzoxMTwvcD4=
+
+Redirected to http://localhost:3000/join_us
+Completed 302 Found in 11246ms (ActiveRecord: 16.9ms)
+
+
+Started GET "/join_us" for 127.0.0.1 at 2013-08-22 15:23:45 +0800
+Processing by JoinController#join_us as HTML
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" [0m
+  Rendered home/_btnt.html.erb (0.3ms)
+  Rendered home/_slider.html.slim (1.1ms)
+  Rendered join/_group.html.slim (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "groups".* FROM "groups" 
+  Rendered home/_btn.html.erb (0.5ms)
+  Rendered join/_join_form.html.slim (11.3ms)
+  Rendered join/join_us.html.slim within layouts/clean_canvas (13.9ms)
+  Rendered layouts/_navbar.html.slim (1.0ms)
+  Rendered layouts/_footer.html.slim (0.0ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/contact.css" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /contact.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thumb_GM_0002.jpg" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /thumb_GM_0002.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thumb_GM_0048.jpg" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /thumb_GM_0048.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thumb_GM_0072.jpg" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /thumb_GM_0072.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /logo.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thumb_GM_0101.jpg" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /thumb_GM_0101.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/thumb_GM_0127.jpg" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /thumb_GM_0127.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clean_canvas/aqua.jpg" for 127.0.0.1 at 2013-08-22 15:23:46 +0800
+Served asset /clean_canvas/aqua.jpg - 304 Not Modified (0ms)
