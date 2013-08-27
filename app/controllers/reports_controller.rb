@@ -5,7 +5,11 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.create(params[:report])
-    redirect_to root_path
+    if save
+      redirect_to success_path
+    else
+      redirect_to err_path
+    end
   end
 
 end

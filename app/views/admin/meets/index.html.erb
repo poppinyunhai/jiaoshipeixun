@@ -6,6 +6,7 @@
       <th>QQ</th>
       <th>参与身份</th>
       <th>就职公司</th>
+      <th>操作</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,9 @@
         <td><%= f.qq %></td>
         <td><%= Statu.find(f.statu_id).name %></td>
         <td><%= f.company %></td>
+        <td>
+          <%= link_to "删除", admin_meet_path(f), :method => :delete %>
+        </td>
       </tr>
     <% end %>
   </tbody>

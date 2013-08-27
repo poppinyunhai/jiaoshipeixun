@@ -2,7 +2,12 @@
 <div style="padding-top:10%; text-align:center ">
   <p>上传成绩单</p>
   <%= form_for @report, :html => { :multipart => true }  do |f| %>
-    <%= f.file_field :avatar%>
-    <%= f.submit "上传"%>
+    <p style="padding-left:200px">
+      <%= f.file_field :avatar%>
+    </p>
+    <p>
+      <%= f.submit "上传", class: "btn btn-large btn-success"%>
+    </p>
+    <p class="text-error">成绩单格式要求(*.pdf)</p>
   <% end %>
 </div>

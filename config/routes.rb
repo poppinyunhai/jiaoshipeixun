@@ -4,6 +4,8 @@ Knewtoefl::Application.routes.draw do
   get 'requirements' => 'home#requirements'
   get 'syllabus' => 'home#syllabus'
   get 'career' => 'home#career'
+  get 'success' => 'home#success'
+  get 'err' => 'home#err'
 
   resources :customers
 

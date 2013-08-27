@@ -1,0 +1,4 @@
+<%= form_for [:admin, @checkout],:url => { :controller => '/admin/checkouts', :action => 'update', :id => @checkout },:html => { :multipart => true } do |f| %>
+  <%= f.kindeditor :content%>
+  <%= f.submit "更新", class: "btn btn-primary"%>
+<% end %>

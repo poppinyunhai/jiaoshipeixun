@@ -6,6 +6,10 @@ class MeetsController < ApplicationController
 
   def create
     @meet = Meet.create(params[:meet])
-    redirect_to root_path
+    if @meet.save
+      redirect_to success_path
+    else
+      redirect_to err_path
+    end
   end
 end
