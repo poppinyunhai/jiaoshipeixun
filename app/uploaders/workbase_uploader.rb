@@ -57,3 +57,18 @@ class WorkbaseUploader < CarrierWave::Uploader::Base
   end
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

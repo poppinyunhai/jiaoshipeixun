@@ -49,6 +49,18 @@ class RecsController < ApplicationController
 
   end
 
+  def edit
+    @rec = Rec.where(:user_id => current_user.id).last
+  end
+
+  def update
+    @rec = Rec.where(:user_id => current_user.id).last
+    @rec.update_attributes(params[:rec])
+    redirect_to asuccess_path
+  end
+
+
+
   def find_skill
     @skill = params[:skill]
   end

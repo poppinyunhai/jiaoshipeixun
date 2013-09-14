@@ -1,0 +1,29 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8 ">
+      <!-- 内容区 -->
+      <%= form_for @rec,:url => { :controller => '/recs', :action => 'update', :id => @rec } do |f| %>
+        <%= f.label :title, "标题" %>
+        <%= f.text_field :title %>
+        <%= f.label :content, "招聘内容"%>
+        <%= f.kindeditor :content %>
+        <p></p>
+        <%= f.submit "保存", class: "btn btn-success"%>
+      <% end %>
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+
+</div>
+

@@ -8,8 +8,15 @@
     <!-- 左边空白结束 -->
     <div class="span8 ">
       <!-- 内容区 -->
-      <p class="muted">发表招聘启示 <%= link_to "退出", destroy_user_session_path, :method => :delete%></p>
-      <%= link_to "发表招聘启示", zguans_path, class: "btn btn-success"%>  <%= link_to "查看接收简历", toudi_path, class: "btn btn-success"%>
+      <p class="muted"> 
+      <%if Rec.where(:user_id => current_user.id).empty? %>
+        <%= link_to "发表招聘启示", zguans_path, class: "btn btn-success"%>
+        <%elsif Rec.where(:user_id => current_user.id).count > 0 %>
+        <%= link_to "管理已发表的招聘启示", edit_rec_path(current_user), class: "btn btn-success"%>
+      <% end %>
+      <%= link_to "查看接收简历", toudi_path, class: "btn btn-success"%>
+      <%= link_to "退出", destroy_user_session_path, :method => :delete%>
+      </p>
       <p></p>
       <p class="muted">选择您需要得人才</p>
       <p></p>
