@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130819091712) do
+ActiveRecord::Schema.define(:version => 20130913095629) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -31,6 +31,12 @@ ActiveRecord::Schema.define(:version => 20130819091712) do
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
+  create_table "askills", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "attachments", :force => true do |t|
     t.string   "image"
     t.datetime "created_at", :null => false
@@ -48,6 +54,19 @@ ActiveRecord::Schema.define(:version => 20130819091712) do
 
   create_table "checkouts", :force => true do |t|
     t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "companies", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "addr"
+    t.string   "person"
+    t.string   "tell"
+    t.integer  "phone"
+    t.string   "email"
+    t.boolean  "check"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -87,6 +106,14 @@ ActiveRecord::Schema.define(:version => 20130819091712) do
     t.datetime "updated_at",    :null => false
   end
 
+  create_table "guans", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "skill_id"
+    t.integer  "askill_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "meets", :force => true do |t|
     t.string   "name"
     t.integer  "phone"
@@ -105,10 +132,31 @@ ActiveRecord::Schema.define(:version => 20130819091712) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "particulars", :force => true do |t|
+    t.string   "role"
+    t.integer  "age"
+    t.string   "name"
+    t.string   "sex"
+    t.string   "work"
+    t.text     "content"
+    t.boolean  "check"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+  end
+
   create_table "projects", :force => true do |t|
     t.text     "background"
     t.text     "question"
     t.text     "feature"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "recs", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -121,6 +169,12 @@ ActiveRecord::Schema.define(:version => 20130819091712) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "status", :force => true do |t|
@@ -138,9 +192,41 @@ ActiveRecord::Schema.define(:version => 20130819091712) do
     t.integer  "position"
   end
 
+  create_table "toudis", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "rec_user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
   create_table "workbases", :force => true do |t|
     t.string   "title"
     t.string   "asset"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "zguans", :force => true do |t|
+    t.integer  "skill_id"
+    t.integer  "rec_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

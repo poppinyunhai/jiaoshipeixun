@@ -1,0 +1,48 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+
+    <!-- 内容区 -->
+    <div class="span8">
+      <h3 class= "text-center">查看简历</h3>
+      <p></p>
+        <% @particular.each do |p|%>
+          <p>
+            姓名：
+            <%= p.name%>
+          </p>
+          <p>
+            年龄：
+            <%= p.age%>
+          </p>
+          <p>
+            性别：
+            <%= p.sex%>
+          </p>
+          <p>
+            工作年限：
+            <%= p.work%>
+          </p>
+          <p>
+            <h3>简历</h3>
+            <%=raw p.content%>
+          </p>
+        <% end %>
+    </div>
+    <!-- 内容区结束 -->
+
+
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+</div>
+
+

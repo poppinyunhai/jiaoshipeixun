@@ -73,7 +73,13 @@ module Admin::ApplicationHelper
         :group_name => '活动管理',
         :sidebar_items => [
           ['查看报名信息', admin_meets_path],
-          ['发布活动须知', new_admin_desc_path]
+          ['发布活动须知', new_admin_desc_path]  
+        ]
+      },
+        {
+        :group_name => '招聘平台管理',
+        :sidebar_items => [
+          ['公司审核', admin_companies_path]
         ]
       }
     ]

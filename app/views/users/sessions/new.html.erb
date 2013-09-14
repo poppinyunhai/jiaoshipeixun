@@ -1,0 +1,37 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8">
+      <!-- 内容区 -->
+      <h2>登陆</h2>
+        <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <div class="form-inputs">
+            <%= f.input :email, :required => false, :autofocus => true, :label => "电子邮件",class: "text-left" %>
+            <%= f.input :password, :required => false, :label => "密码" %>
+            <%= f.input :remember_me, :label => "记住我", :as => :boolean if devise_mapping.rememberable? %>
+          </div>
+          <div>
+            <%= f.button :submit, "登陆", :class => 'btn btn-primary' %>
+            <p></p>
+            没有账号？<%= link_to "马上注册", new_user_registration_path %>
+          </div>
+        <% end %>
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+</div>
+
+
+<div style="padding-top:5%">
+
+</div>

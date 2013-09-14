@@ -1,0 +1,31 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8 text-center">
+      <!-- 内容区 -->
+      <p class="muted">打造国内最专业的英语教师职业平台</p>
+      <p style="padding-top:4%"></p>
+      <%= link_to "教师入口", recs_path, class: "btn btn-success btn-large" %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <% if signed_in? and Company.where(:user_id => current_user.id).count == 0 %>
+        <%= link_to "公司入口", new_company_path, class: "btn btn-success btn-large" %>
+      <% elsif signed_in? and Company.where(:user_id => current_user.id).last.check %>
+          <%= link_to "公司入口", guans_path, class: "btn btn-success btn-large" %>
+      <% elsif signed_in? and Company.where(:user_id => current_user.id).last.check != "true"%>
+          <%= link_to "公司入口", yan_path, class: "btn btn-success btn-large" %>
+      <% else %>
+        <%= link_to "公司入口", new_user_session_path, class: "btn btn-success btn-large" %>
+      <% end %>
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+</div>

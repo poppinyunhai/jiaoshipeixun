@@ -1,0 +1,30 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8 ">
+      <!-- 内容区 -->
+      <h4>修改简历</h4>
+      <%= form_for @particular,:url => { :controller => '/particulars', :action => 'update', :id => @particular } do |f| %>
+        <%= f.kindeditor :content%>
+        <p></p>
+
+        <%= f.submit "更新", class: "btn btn-primary"%>
+      <% end %>
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+
+</div>
+
+
+

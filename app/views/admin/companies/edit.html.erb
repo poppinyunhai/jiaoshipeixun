@@ -1,0 +1,38 @@
+<div class="row"><h4>公司信息</h4></div>
+  <div class= "row">
+    <div class= "span4" >
+      <p>
+        公司名称
+        <%= @company.name %>
+      </p>
+      <p>
+        公司地址
+        <%= @company.addr %>
+      </p>
+      <p>
+        联系人
+        <%= @company.person %>
+      </p>
+      <p>
+        电话
+        <%= @company.tell %>
+      </p>
+      <p>
+        手机
+        <%= @company.phone %>
+      </p>
+      <p>
+        电子邮件  
+        <%= @company.email %>
+      </p>
+      <%= form_for [:admin, @company] do |f| %>
+        <%= f.label :check, "是否通过审核"%>
+        <%= f.text_field :check %>
+        <%= f.submit "通过审核" %>
+      <% end %>
+    </div>
+
+
+    <div class= "span4" >
+    </div>
+  </div>

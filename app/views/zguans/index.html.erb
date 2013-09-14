@@ -1,0 +1,31 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8 text-center">
+      <!-- 内容区 -->
+      <p class="muted">选择招聘类型</p>
+      <p style="padding-top:4%"></p>
+      <form action="/recs/new" method="GET">
+          <% @skill.each do |s| %>
+            <%= s.name%>
+            <%= check_box_tag "skill[]", s.id %>
+          <% end %>
+          <p></p>
+        <button type="submit", class="btn btn-success">确定</button>
+      </form>
+   
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="row"><h4>公司信息管理</h4></div>
+  <div class= "row">
+    <div class= "span4" >
+      <% @company.each do |c| %>
+        <p>
+          <%= link_to c.name, edit_admin_company_path(c) %>
+        </p>
+      <% end %>
+    </div>
+    <div class= "span4" >
+    </div>
+  </div>

@@ -1,0 +1,40 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+
+    <!-- 内容区 -->
+    <div class="span8">
+      <h3 class= "text-center">填写公司信息</h3>
+      <p></p>
+      <%= form_for @company do |f| %>
+        <%= f.label :name,"公司名称" %>
+        <%= f.text_field :name %>
+        <%= f.label :addr,"地址" %>
+        <%= f.text_field :addr %>
+        <%= f.label :person,"联系人" %>
+        <%= f.text_field :person %>
+        <%= f.label :tell,"电话" %>
+        <%= f.text_field :tell %>
+        <%= f.label :phone,"手机" %>
+        <%= f.text_field :phone %>
+        <%= f.label :email,"电子邮件" %>
+        <%= f.text_field :email %>
+        <p></p>
+        <%= f.submit "保存", class: "btn btn-success"%>
+      <% end %>
+    </div>
+    <!-- 内容区结束 -->
+
+
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+</div>

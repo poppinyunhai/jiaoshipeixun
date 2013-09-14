@@ -1,0 +1,30 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8 text-center">
+      <!-- 内容区 -->
+      <p class="muted">选择擅长课程专业</p>
+      <p style="padding-top:4%"></p>
+      <form action="/particulars/new" method="GET">
+          <% @askill.each do |s| %>
+            <%= s.name%>
+            <%= check_box_tag "askill[]", s.id %>
+          <% end %>
+          <input type="hidden"  name="skill" value="<%= @skill.join(',') %>">
+        <button type="submit">申请</button>
+      </form>
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+</div>
+

@@ -7,7 +7,8 @@ module ApplicationHelper
         ['资格认证', projects_path],
         ['权威师资', teachers_path],
         ['学员感言', cases_path],
-        ['立即加入', join_path]
+        ['立即加入', join_path],
+        ['招聘平台', roles_path]
       ]
     }
   end

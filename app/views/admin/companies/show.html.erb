@@ -1,0 +1,34 @@
+<div class="row"><h4>公司信息</h4></div>
+  <div class= "row">
+    <div class= "span4" >
+      <p>
+        公司名称
+        <%= @company.name %>
+      </p>
+      <p>
+        公司地址
+        <%= @company.addr %>
+      </p>
+      <p>
+        联系人
+        <%= @company.person %>
+      </p>
+      <p>
+        电话
+        <%= @company.tell %>
+      </p>
+      <p>
+        手机
+        <%= @company.phone %>
+      </p>
+      <p>
+        电子邮件  
+        <%= @company.email %>
+      </p>
+        <%= link_to "通过审核", :controller => 'admin/companies', :action => 'update', :id => @company %>
+    </div>
+
+
+    <div class= "span4" >
+    </div>
+  </div>

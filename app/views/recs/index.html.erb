@@ -1,0 +1,67 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8 ">
+      <!-- 内容区 -->
+       <form action="/zsearch" method="GET">
+        <% skill=Skill.find(:all).map{|t|[t.name,t.id]} %>
+        <%=select_tag :skill, options_for_select(skill), :include_blank => false, :style => "width:200px" %>
+        <% if signed_in? and Particular.where(:user_id => current_user.id).count ==0 %>
+          <%= link_to "填写自己的简历", skills_path %>
+          <%= link_to '退出登录', destroy_user_session_path, :method => :delete %>
+        <% elsif signed_in? %>
+          <%= link_to "管理自己的简历", edit_particular_path(current_user) %>
+          <%= link_to '退出登录', destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "登陆", new_user_session_path %>
+          <%= link_to "注册",new_user_registration_path%>
+        <% end %>
+        <p></p>
+        <button type="submit" class= "btn btn-success">搜索</button>
+
+      </form>
+
+
+
+      <table class="table">
+              <thead>
+                <tr>
+                  <th>招聘</th>
+                  <th>公司名称</th>
+                  
+                  <th>发表时间</th>
+                  <th>地区</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @rec.each do |r| %>
+                <tr>
+                  <td><%= link_to r.title, rec_path(r) %></td>
+                  <td><%= Company.where(:user_id => r.user_id).first.name%></td>
+                  
+                  <td><%=r.created_at.strftime('%Y-%m-%d %H:%M:%S').to_s %></td>
+                  <td>北京</td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>      
+      
+        <p>
+          
+          
+        </p>
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+</div>
+

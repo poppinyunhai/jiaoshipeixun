@@ -1,0 +1,37 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8 ">
+      <!-- 内容区 -->
+      <p>
+        <strong>公司名称：</strong>
+        <%= Company.where(:user_id => @rec.user_id).first.name%>
+      </p>
+      <p>
+        <strong>招聘类型：</strong>
+        <% @guan = Zguan.where(:rec_id => @rec.id).all %>
+        <% @guan.each do |g| %>
+          <%= Skill.find(g.skill_id).name%>
+        <% end %>
+      </p>
+      <%= @rec.title %>
+      <p></p>
+      <%=raw @rec.content %>
+      <p></p>
+        <%= link_to "投递简历", tou_path(:rec_user_id => @rec.user_id), class: "btn btn-success" %>
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+
+</div>
+

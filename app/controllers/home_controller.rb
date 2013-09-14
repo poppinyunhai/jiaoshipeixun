@@ -13,5 +13,7 @@ class HomeController < ApplicationController
   def career
   end
 
+  def roles
+  end
 
 end

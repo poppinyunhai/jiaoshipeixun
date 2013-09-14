@@ -1,17 +1,34 @@
 Knewtoefl::Application.routes.draw do
 
+  devise_for :users
+
   get "join_us" => "join#join_us", :as => 'join'
   get 'requirements' => 'home#requirements'
   get 'syllabus' => 'home#syllabus'
   get 'career' => 'home#career'
   get 'success' => 'home#success'
   get 'err' => 'home#err'
+  get 'roles' => 'home#roles'
+  get 'search' => 'guans#search'
+  get 'yan' => 'companies#yan'#
+  get 'asuccess' => 'recs#success'
+  get 'tsuccess' => 'recs#tsuccess'
+  get 'zsearch' => 'recs#search'    #公司搜索应聘者简历
+  get 'tou' => 'recs#toudi'         #用户投递简历create
+  get 'toudi' => 'guans#toudi'      #查看投递简历信息
+  get 'terror' => 'recs#error'      #重复投递简历错误提示
 
   resources :customers
 
   devise_for :admins
 
   resources :attachments
+
+  resources :zguans
+
+  resources :recs
+
+  resources :companies
 
   resources :cooperators
 
@@ -33,8 +50,17 @@ Knewtoefl::Application.routes.draw do
 
   resources :checkouts
 
+  resources :particulars
+
+  resources :skills
+
+  resources :askills
+
+  resources :guans
+
   namespace :admin do
     root :to => 'teachers#index'
+    resources :companies
     resources :teachers do
       member do
         put 'move_up'

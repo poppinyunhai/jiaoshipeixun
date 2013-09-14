@@ -1,0 +1,39 @@
+<%=render "home/slider"%>
+<div class="container-fluid" style="padding-top:5%">
+  <div class="row-fluid">
+    <!-- 左边空白 -->
+    <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 左边空白结束 -->
+    <div class="span8 ">
+      <!-- 内容区 -->
+      <p class="muted">发表招聘启示 <%= link_to "退出", destroy_user_session_path, :method => :delete%></p>
+      <%= link_to "发表招聘启示", zguans_path, class: "btn btn-success"%>  <%= link_to "查看接收简历", toudi_path, class: "btn btn-success"%>
+      <p></p>
+      <p class="muted">选择您需要得人才</p>
+      <p></p>
+      <form action="/search" method="GET">
+        <% skill=Skill.find(:all).map{|t|[t.name,t.id]} %>
+      <td>
+        <%=select_tag :skill, options_for_select(skill), :include_blank => false, :style => "width:200px"-%>
+      </td>
+        <% askill=Askill.find(:all).map{|t|[t.name,t.id]} %>
+      <td>
+        <%=select_tag :askill, options_for_select(askill), :include_blank => false, :style => "width:200px"-%>
+      </td>
+      <p></p>
+        <button type="submit" class= "btn btn-success">搜索</button>
+      </form>
+      <!-- 内容区结束 -->
+    </div>
+    <!-- 右边空白 -->
+     <div class="span2">
+      <!--Sidebar content-->
+    </div>
+    <!-- 右边空白结束 -->
+  </div>
+
+</div>
+
+

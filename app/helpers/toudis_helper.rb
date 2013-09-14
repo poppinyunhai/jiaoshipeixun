@@ -1,0 +1,2 @@
+module ToudisHelper
+end
