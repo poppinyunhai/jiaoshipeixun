@@ -79,7 +79,8 @@ module Admin::ApplicationHelper
         {
         :group_name => '招聘平台管理',
         :sidebar_items => [
-          ['公司审核', admin_companies_path]
+          ['公司审核', admin_companies_path],
+          ['招聘启事管理', admin_recs_path]
         ]
       }
     ]

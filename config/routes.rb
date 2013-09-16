@@ -32,6 +32,8 @@ Knewtoefl::Application.routes.draw do
 
   resources :cooperators
 
+
+
   resources :assets
 
   resources :reports
@@ -61,6 +63,7 @@ Knewtoefl::Application.routes.draw do
   namespace :admin do
     root :to => 'teachers#index'
     resources :companies
+    resources :recs
     resources :teachers do
       member do
         put 'move_up'

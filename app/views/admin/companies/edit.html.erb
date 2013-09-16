@@ -28,7 +28,8 @@
       <%= form_for [:admin, @company] do |f| %>
         <%= f.label :check, "是否通过审核"%>
         <%= f.text_field :check %>
-        <%= f.submit "通过审核" %>
+        <p></p>
+        <%= f.submit "通过审核", class: "btn btn-success" %>
       <% end %>
     </div>
 

@@ -1,0 +1,11 @@
+<div class="row"><h4>招聘启事列表</h4></div>
+  <div class= "row">
+    <% @rec.each do |r|%>
+    <div class= "span4" >
+      <%= link_to r.title, admin_rec_path(r)%>
+    </div>
+    <div class= "span4" >
+      <%= link_to "删除", admin_rec_path(r), :method => :delete %>
+    </div>
+    <% end %>
+  </div>
