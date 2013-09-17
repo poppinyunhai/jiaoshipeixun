@@ -63,6 +63,7 @@ Knewtoefl::Application.routes.draw do
   namespace :admin do
     root :to => 'teachers#index'
     resources :companies
+    resources :particulars
     resources :recs
     resources :teachers do
       member do

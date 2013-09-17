@@ -1,7 +1,7 @@
 class RecsController < ApplicationController
   before_filter :find_skill
   def index
-    @rec = Rec.all #分页
+    @rec = Rec.page(params[:page]).per(50).order("id DESC")
   end
 
   def show

@@ -9,7 +9,7 @@ class GuansController < ApplicationController
   end
 
   def toudi
-    @toudi = Toudi.where(:rec_user_id => current_user.id).all
+    @toudi = Toudi.where(:rec_user_id => current_user.id).page(params[:page]).per(50).order("id DESC")
   end
 
 

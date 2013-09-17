@@ -55,5 +55,4 @@ gem 'carrierwave'
 gem 'rails_kindeditor'
 gem "paperclip", "~> 2.8.0"
 
-
 gem "strftime", "~> 1.0.0"

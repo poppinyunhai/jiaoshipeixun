@@ -1,26 +1,25 @@
-<h3>招聘启示管理</h3>
+<h3>教师简历</h3>
 <div>
   <table class="table table-striped">
     <thead>
       <tr>
         <th>ID</th>
-        <th>标题</th>
+        <th>姓名</th>
         <th>更新时间</th>
         <th>操作</th>
       </tr>
     </thead>
     <tbody>
-      <% @rec.each do |r|%>
+      <% @particular.each do |r| %>
       <tr>
         <td><%= r.id %></td>
-        <td><%= r.title %></td>
+        <td><%= r.name %></td>
         <td><%= r.updated_at.strftime('%Y-%m-%d %H:%M:%S').to_s %></td>
-        <td><%= link_to "查看", admin_rec_path(r)%>|<%= link_to "删除", admin_rec_path(r), :method => :delete %></td>
+        <td><%= link_to "查看", admin_particular_path(r)%>|<%= link_to "删除", admin_particular_path(r), :method => :delete %></td>
       </tr>
       <% end %>
   </table>
-   <div class="text-center">
-    <%= paginate @rec %>
+  <div class="text-center">
+    <%= paginate @particular %>
   </div>
 </div>
-

@@ -17,7 +17,7 @@ class ParticularsController < ApplicationController
       end
     end
 
-    if @guan.save
+    if @particular.save
       redirect_to asuccess_path
     else
       render 'new'

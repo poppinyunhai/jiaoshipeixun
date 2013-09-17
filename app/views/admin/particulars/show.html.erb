@@ -1,0 +1,16 @@
+<h3>教师简历</h3>
+<p>姓名：<%= @particular.name %></p>
+<p>年龄：<%= @particular.age %></p>
+<p>工作年限：<%= @particular.age %></p>
+<p>性别：<%= @particular.sex %></p>
+<p>手机：<%= @particular.phone %></p>
+<p>简历：<%=raw @particular.content %></p>
+
+
+
+<p></p>
+<%=raw @particular.content %>
+<p></p>
+<%=link_to "返回",admin_particulars_path %>
+
+
