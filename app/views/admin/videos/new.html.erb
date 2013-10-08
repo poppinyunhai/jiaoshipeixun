@@ -1,0 +1,8 @@
+<div class="span10">
+  <%= form_for [:admin, @video] do |f| %>
+    <h1> 万能页 </h1>
+      <%= f.kindeditor :content%>
+    <p></p>
+    <%= f.submit "确定", class: "btn btn-primary"%>
+  <% end %>
+</div>

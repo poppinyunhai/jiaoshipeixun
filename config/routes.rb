@@ -26,13 +26,13 @@ Knewtoefl::Application.routes.draw do
 
   resources :zguans
 
+  resources :videos
+
   resources :recs
 
   resources :companies
 
   resources :cooperators
-
-
 
   resources :assets
 
@@ -62,9 +62,11 @@ Knewtoefl::Application.routes.draw do
 
   namespace :admin do
     root :to => 'teachers#index'
+    resources :videos
     resources :companies
     resources :particulars
     resources :recs
+    resources :cities
     resources :teachers do
       member do
         put 'move_up'

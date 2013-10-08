@@ -1,0 +1,4 @@
+<%= form_for [:admin, @video],:url => { :controller => '/admin/videos', :action => 'update', :id => @video },:html => { :multipart => true } do |f| %>
+  <%= f.kindeditor :content%>
+  <%= f.submit "更新", class: "btn btn-primary"%>
+<% end %>
