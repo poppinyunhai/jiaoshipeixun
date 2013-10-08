@@ -84,8 +84,16 @@ module Admin::ApplicationHelper
           ['教师简历管理', admin_particulars_path]
 
         ]
-      }
-    ]
+      },
+        {
+          :group_name => '万能页',
+          :sidebar_items => [
+            ['新建内容', new_admin_video_path],
+            ['更新内容', edit_admin_video_path(Video.last)],
+            ['查看内容', admin_videos_path]
+          ]
+        }
+      ]
   end
 end
 
